@@ -225,6 +225,6 @@ func (list DrawList) AddImageV(textureId TextureID, pMin, pMax Vec2, uvMin, uvMa
 	C.iggDrawListAddImageV(list.handle(), C.IggTextureID(textureId), pMinArg, pMaxArg, uvMinArg, uvMaxArg, C.uint(c))
 }
 
-func (list DrawList) AddCallback(callback func(interface{}) bool, callbackData interface{}) {
-	C.iggDrawListAddCallback(list.handle(), unsafe.Pointer(&callback), unsafe.Pointer(&callbackData))
+func (list DrawList) AddCallback(callback func(interface{}) bool, callbackData unsafe.Pointer) {
+	C.iggDrawListAddCallback(list.handle(), unsafe.Pointer(&callback), callbackData)
 }
