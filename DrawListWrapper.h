@@ -72,6 +72,7 @@ extern void iggDrawListAddImageV(IggDrawList handle, IggTextureID id,
                                 IggVec2 *p_min, IggVec2 *p_max,
                                 IggVec2 *uv_min, IggVec2 *uv_max,
                                 unsigned int color);
+extern void iggDrawListAddCallback(IggDrawList handle, void *callback, void *callback_data);
 
 #ifdef __cplusplus
 }

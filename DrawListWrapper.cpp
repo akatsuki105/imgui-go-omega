@@ -204,3 +204,9 @@ void iggDrawListAddImageV(IggDrawList handle, IggTextureID id, IggVec2 *p_min,
   Vec2Wrapper uvMaxArg(uv_max);
   list->AddImage(ImTextureID(id), *pMinArg, *pMaxArg, *uvMinArg, *uvMaxArg, color);
 }
+
+void iggDrawListAddCallback(IggDrawList handle, void* callback, void* callback_data) {
+  ImDrawList *list = reinterpret_cast<ImDrawList *>(handle);
+  ImDrawCallback cb = reinterpret_cast<ImDrawCallback>(callback);
+  list->AddCallback(cb, callback_data);
+}
