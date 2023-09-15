@@ -3,7 +3,7 @@ package imgui_test
 import (
 	"testing"
 
-	"github.com/pokemium/imgui-go-omega"
+	"github.com/akatsuki105/imgui-go-omega"
 
 	"github.com/stretchr/testify/assert"
 )

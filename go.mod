@@ -1,6 +1,6 @@
-module github.com/pokemium/imgui-go-omega
+module github.com/akatsuki105/imgui-go-omega
 
-go 1.17
+go 1.21
 
 require (
 	github.com/go-gl/gl v0.0.0-20210315015930-ae072cafe09d
